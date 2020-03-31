@@ -32,11 +32,22 @@ def dfs(graph, start, visited=None):
     return visited
 
 # Sample graph
-graph = {'A': set(['B', 'C', 'D', 'E']),
-         'B': set(['A', 'C']),
-         'C': set(['A', 'B', 'D', 'E']),
-         'D': set(['A', 'C']),
-         'E': set(['A', 'C'])}
+graph = {'A': set(['B', 'E', 'F']),
+         'B': set(['A', 'C', 'F']),
+         'C': set(['B', 'D', 'G']),
+         'D': set(['C','G']),
+         'E': set(['A', 'F','I']),
+         'F': set(['A', 'B', 'E', 'I']),
+         'G': set(['C', 'D', 'J']),
+         'H': set(['K', 'L']),
+         'I': set(['E', 'F', 'J', 'M']),
+         'J': set(['G', 'I']),
+         'K': set(['H', 'L', 'O']),
+         'L': set(['H', 'K', 'P']),
+         'M': set(['I', 'N']),
+         'N': set(['M']),
+         'O': set(['K']),
+         'P': set(['L'])}
 
 t = 0
 v = dfs(graph, 'A')

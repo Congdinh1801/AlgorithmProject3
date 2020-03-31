@@ -13,11 +13,6 @@ def dfs_path(graph, start, goal):
                 stack.append((neighbor, path + [neighbor]))
 
 # Sample graph
-graph1 = {'A': set(['B', 'E']),
-         'B': set(['A', 'C']),
-         'C': set(['B', 'D', 'E']),
-         'D': set(['C']),
-         'E': set(['A', 'C'])}
 graph2 = {'A': set(['B', 'E', 'F']),
          'B': set(['A', 'C', 'F']),
          'C': set(['B', 'D', 'G']),
@@ -35,5 +30,5 @@ graph2 = {'A': set(['B', 'E', 'F']),
          'O': set(['K']),
          'P': set(['L'])}
 
-v = dfs_path(graph2, 'A', 'N')
+v = dfs_path(graph2, 'H', 'P')
 print (v)

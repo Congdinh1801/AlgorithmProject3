@@ -1,19 +1,23 @@
-#bfs traverse graph
-def bfs(graph, start):
-    visited, queue = set(), [start]
-    p =[]
-    while queue:
-        vertex = queue.pop(0)
+# http://eddmann.com/posts/depth-first-search-and-breadth-first-search-in-python/
+
+# An iterative DFS implementation 
+# 
+# -GRAPH: a dictionary of vertex and sdjancent list
+# -START: starting vertex for traversal
+# -VISITED: a set of visited vertices 
+#
+def _dfs(graph, start):
+    visited, stack = set(), [start]
+    while stack:
+        #print('The stack is:', stack)
+        vertex = stack.pop()
         if vertex not in visited:
             visited.add(vertex)
-            p.append(vertex)
-            queue.extend(graph[vertex] - visited)
-    return p
+            stack.extend(graph[vertex] - visited)
+    return visited
 
-#bfs(graph, 'A') # {'B', 'C', 'A', 'F', 'D', 'E'}
-def main():
-    
-    graph2 = {'A': set(['B', 'E', 'F']),
+# Sample graphs
+graph = {'A': set(['B', 'E', 'F']),
          'B': set(['A', 'C', 'F']),
          'C': set(['B', 'D', 'G']),
          'D': set(['C','G']),
@@ -30,9 +34,7 @@ def main():
          'O': set(['K']),
          'P': set(['L'])}
 
-    v = bfs(graph2, 'H')
-    print(v)
 
-if __name__ == '__main__':
-    main()
 
+v = _dfs(graph, 'H')
+print(v)
