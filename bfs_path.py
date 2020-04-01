@@ -25,15 +25,23 @@ def bfs_path(graph, start, goal):
     return None 
 
 def main():
-    graph = {
-        'A': set(['B', 'C']),  
-        'B': set(['A', 'D', 'E']),
-        'C': set(['A', 'F']),   
-        'D': set(['B']),     
-        'E': set(['B', 'F']),
-        'F': set(['C', 'E']),
-    }
-    path = bfs_path(graph, 'D', 'F')
+    graph2 = {'A': set(['B', 'E', 'F']),
+         'B': set(['A', 'C', 'F']),
+         'C': set(['B', 'D', 'G']),
+         'D': set(['C','G']),
+         'E': set(['A', 'F','I']),
+         'F': set(['A', 'B', 'E', 'I']),
+         'G': set(['C', 'D', 'J']),
+         'H': set(['K', 'L']),
+         'I': set(['E', 'F', 'J', 'M']),
+         'J': set(['G', 'I']),
+         'K': set(['H', 'L', 'O']),
+         'L': set(['H', 'K', 'P']),
+         'M': set(['I', 'N']),
+         'N': set(['M']),
+         'O': set(['K']),
+         'P': set(['L'])}
+    path = bfs_path(graph2, 'A', 'N')
     if path:
         print(path)
     else:
