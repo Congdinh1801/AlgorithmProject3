@@ -73,7 +73,7 @@ class Graph:
 				print("") 
 
 # Create a graph given in the above diagram 
-g = Graph(12) 
+g = Graph(13) 
 g.addEdge(1, 3) 
 g.addEdge(2, 1)
 g.addEdge(3, 2)
