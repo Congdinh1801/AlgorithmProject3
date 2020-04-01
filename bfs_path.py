@@ -41,7 +41,7 @@ def main():
          'N': set(['M']),
          'O': set(['K']),
          'P': set(['L'])}
-    path = bfs_path(graph2, 'A', 'N')
+    path = bfs_path(graph2, 'H', 'P')
     if path:
         print(path)
     else:
