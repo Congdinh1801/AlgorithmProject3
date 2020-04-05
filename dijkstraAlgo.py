@@ -27,7 +27,7 @@ def dijkstra(edges, f, t):
 
     return float("inf")
 
-if __name__ == "__main__":
+def dijk():
     edges = [
         ("A", "B", 22), 
         ("A", "C" ,9), 

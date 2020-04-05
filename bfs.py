@@ -1,5 +1,5 @@
 #bfs traverse graph
-def bfs(graph, start):
+def bfsTrav(graph, start):
     visited, queue = set(), [start]
     p =[]
     while queue:
@@ -11,7 +11,7 @@ def bfs(graph, start):
     return p
 
 #bfs(graph, 'A') # {'B', 'C', 'A', 'F', 'D', 'E'}
-def main():
+def bfs():
     
     graph2 = {'A': set(['B', 'E', 'F']),
          'B': set(['A', 'C', 'F']),
@@ -30,9 +30,10 @@ def main():
          'O': set(['K']),
          'P': set(['L'])}
 
-    v = bfs(graph2, 'H')
+    v = bfsTrav(graph2, 'A')
+    print("Starting from A: ")
     print(v)
-
-if __name__ == '__main__':
-    main()
+    v = bfsTrav(graph2, 'H')
+    print("Starting from H: ")
+    print(v)
 
