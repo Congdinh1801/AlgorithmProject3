@@ -1,11 +1,11 @@
-
+#Main for project 3 (algorithms) Nathan Van Aalsburg, Dinh Hoang, Cameron Davis
 from dfs_iterative import dfs_iterative as DFSiter
 from bfs import bfs as BFS
 from dfs_path import dfs_path as DFSpath
 from bfs_path import bfs_path as BFSpath
 from dfs_findSCC import dfs_findSCC as SCC
 from dijkstraAlgo import dijk
-#import kruskal
+from kruskal_algorithm import kruskal as Kruskal
 
 def main():
     while True:
@@ -24,7 +24,7 @@ def main():
             print("Question 2: ")
             sel = input("DFS or BFS? ")
             if sel.upper() == "DFS":
-               dfs_path()
+               DFSpath()
             else: 
                BFSpath()
 
@@ -38,7 +38,7 @@ def main():
 
         elif sel == "5":
             print("Question 5: ")
-            #kruskal
+            Kruskal()
         else:
             break
 

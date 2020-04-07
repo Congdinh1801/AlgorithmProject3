@@ -91,28 +91,29 @@ class Graph:
             print ("%d -- %d == %d" % (u,v,weight)) 
   
 # Driver code 
-g = Graph(9) 
-g.addEdge(0, 1, 22) 
-g.addEdge(0, 2, 9) 
-g.addEdge(0, 3, 12)
-g.addEdge(1, 7, 34)
-g.addEdge(1, 2, 35) 
-g.addEdge(1, 5, 36)
-g.addEdge(2, 3, 4)
-g.addEdge(2, 4, 65)
-g.addEdge(2, 5, 42)
-g.addEdge(3, 4, 33)
-g.addEdge(3, 8, 30)
-g.addEdge(4, 5, 18)
-g.addEdge(4, 6, 23)
-g.addEdge(5, 6, 39)
-g.addEdge(6, 7, 25)
-g.addEdge(5, 7, 24)
-g.addEdge(7, 8, 19)
+def kruskal():
+    g = Graph(9) 
+    g.addEdge(0, 1, 22) 
+    g.addEdge(0, 2, 9) 
+    g.addEdge(0, 3, 12)
+    g.addEdge(1, 7, 34)
+    g.addEdge(1, 2, 35) 
+    g.addEdge(1, 5, 36)
+    g.addEdge(2, 3, 4)
+    g.addEdge(2, 4, 65)
+    g.addEdge(2, 5, 42)
+    g.addEdge(3, 4, 33)
+    g.addEdge(3, 8, 30)
+    g.addEdge(4, 5, 18)
+    g.addEdge(4, 6, 23)
+    g.addEdge(5, 6, 39)
+    g.addEdge(6, 7, 25)
+    g.addEdge(5, 7, 24)
+    g.addEdge(7, 8, 19)
 
 
 
   
-g.KruskalMST() 
+    g.KruskalMST() 
   
-#This code is contributed by Neelam Yadav 
+    #This code is contributed by Neelam Yadav 

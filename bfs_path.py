@@ -2,7 +2,7 @@
 https://codereview.stackexchange.com/questions/193410/breadth-first-search-implementation-in-python-3-to-find-path-between-two-given-n
 '''
 
-def bfs_path(graph, start, goal):
+def bfs_run(graph, start, goal):
     """
     finds a shortest path in undirected `graph` between `start` and `goal`. 
     If no path is found, returns `None`
@@ -24,7 +24,7 @@ def bfs_path(graph, start, goal):
             visited.add(neighbor)   
     return None 
 
-def main():
+def bfs_path():
     graph2 = {'A': set(['B', 'E', 'F']),
          'B': set(['A', 'C', 'F']),
          'C': set(['B', 'D', 'G']),
@@ -41,12 +41,9 @@ def main():
          'N': set(['M']),
          'O': set(['K']),
          'P': set(['L'])}
-    path = bfs_path(graph2, 'H', 'P')
+    path = bfs_run(graph2, 'H', 'P')
     if path:
         print(path)
     else:
         print('no path found')
-        
-if __name__ == '__main__':
-    main()
 
